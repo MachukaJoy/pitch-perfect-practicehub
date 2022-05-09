@@ -4,7 +4,7 @@
 #### By **Joy Machuka**
 
 + [Description](#Description)
-+ [Setup](#'How to run the code')
++ [How to run the code](#Setup)
 + [Live Site](#Live-Site)
 + [Technologies](#Technologies-and-Languages-Used)
 + [Authors Info](#Author)
@@ -37,7 +37,7 @@ This  is a flask application that allows users to post one minute pitches and al
 
 
 
-## How to run the code
+## Setup
 
 1. Clone the repository:
 HTTPS: `git clone https://github.com/MachukaJoy/pitch-perfect-practicehub.git`<br>
