@@ -9,6 +9,9 @@ class User(db.Model,UserMixin):
     email  = db.Column(db.String(255),unique = True,nullable = False)
     secure_password = db.Column(db.String(255),nullable = False)
 
+    bio = db.Column(db.String(255))
+    profile_pic = db.Column(db.String())
+
     @property
     def set_password(self):
         raise AttributeError('You cannot read the password attribute')

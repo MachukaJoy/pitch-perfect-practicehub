@@ -1,4 +1,4 @@
-from flask import render_template, url_for,redirect,flash, request
+from flask import render_template, url_for,redirect,flash, request, abort
 from . import auth
 from flask_login import login_user,login_required,logout_user
 from .forms import RegForm, LoginForm
