@@ -1,5 +1,9 @@
 from flask import Flask
 from config import Config
+from flask_sqlalchemy import SQLAlchemy
+
+
+db = SQLAlchemy()
 app = Flask(__name__)
 
 def create_app():
@@ -10,4 +14,5 @@ def create_app():
     app.register_blueprint(authentication_blueprint)
     app.register_blueprint(main_blueprint)
 
+    db.init_app(app)
     return app 
