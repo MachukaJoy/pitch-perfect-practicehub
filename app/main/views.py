@@ -9,7 +9,9 @@ from .. import db,photos
 
 @main.route('/')
 def index():
-    return render_template('index.html')
+    job = Pitch.query.filter_by(category = 'job')
+    pitches = Pitch.query.all() 
+    return render_template('index.html',job = job, pitches=pitches)
 
 @main.route('/new_pitch', methods = ['POST','GET'])
 @login_required
@@ -20,7 +22,7 @@ def new_pitch():
         post = form.post.data
         category = form.category.data
         user_id = current_user
-        new_pitch = Pitch(post=post,user_id=current_user._get_current_object().id,category=category)
+        new_pitch = Pitch(post=post,user_id=current_user._get_current_object().id,category=category, title=title)
         new_pitch.save_p()
         return redirect(url_for('main.index'))
     return render_template('create_pitch.html', form = form)
