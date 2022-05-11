@@ -3,3 +3,4 @@ start.sh
 *pyc
 __pycache__
 virtual/
+instance/

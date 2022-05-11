@@ -9,6 +9,7 @@ manager = Manager(app)
 migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 manager.add_command('run',Server(use_debugger=True))
+app.config['SECRET_KEY'] = 'any secret string'
 
 @manager.shell
 def make_shell_context():
