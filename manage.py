@@ -3,12 +3,14 @@ from flask_migrate import Migrate, MigrateCommand
 from app import create_app,db
 from app.models import User
 
-app = create_app()
+app = create_app('production')
 
 manager = Manager(app)
 migrate = Migrate(app,db)
+
 manager.add_command('db',MigrateCommand)
-manager.add_command('run',Server(use_debugger=True))
+manager.add_command('server',Server(use_debugger=True))
+
 app.config['SECRET_KEY'] = 'any secret string'
 
 @manager.shell

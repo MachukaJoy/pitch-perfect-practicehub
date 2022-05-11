@@ -9,11 +9,11 @@ from .. import db,photos
 
 @main.route('/')
 def index():
-    job = Pitch.query.filter_by(category = 'Job').all() 
+    interview = Pitch.query.filter_by(category = 'Interview').all() 
     pitches = Pitch.query.all() 
-    event = Pitch.query.filter_by(category = 'Events').all()
-    advertisement = Pitch.query.filter_by(category = 'Advertisement').all()
-    return render_template('index.html', job = job,event = event, pitches = pitches,advertisement= advertisement)
+    introductory = Pitch.query.filter_by(category = 'Introductory').all()
+    punchline = Pitch.query.filter_by(category = 'Punchline').all()
+    return render_template('index.html', interview = interview,introductory = introductory, pitches = pitches,punchline= punchline)
 
 @main.route('/create_new', methods = ['POST','GET'])
 @login_required

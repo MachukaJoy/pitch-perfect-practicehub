@@ -5,7 +5,7 @@
 					{% for category in pitchdb %}
 					<div class="col-md-4" >
 						<div class="thumbnail" id="carded">
-							<h5 class="card-header">{{category.title}}</h5>
+							<h5 class="card-header" style="background-color:rgb(226, 159, 171)">{{category.title}}</h5>
 							<div class="card-body">
 									<p>{{category.post}}</p>
 									<p class="text-center"> Category: {{category.category}}</p>
@@ -16,20 +16,17 @@
 									
 									<span class="foot"><i class="fa fa-thumbs-down" style="color:red;"></i></span></div>
 			
-								<a href="{{url_for('main.comment',pitch_id = category.id)}}" class="btn btn-info btn-sm"> Comment</a>
+								<a href="{{url_for('main.comment',pitch_id = category.id)}}" class="btn btn-sm", id="commentbtn"> Comment</a>
 							</div>
 						</div>
 					</div>
 					
 					{% endfor %}
 				{% else %}
-				<div class="card w-90 mb-3">
-					<div class="card-body">
 				
-						<p class="card-title">Category Has 0 posts</p>
-					</div>
+				
+						<p id="count">Category Has 0 posts</p>
 				</div>
 				{% endif %}
 			</div>
-</div>
 {% endmacro %}

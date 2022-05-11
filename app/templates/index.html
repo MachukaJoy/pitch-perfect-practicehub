@@ -5,30 +5,30 @@
 <div class="container">
     <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
         <li class="nav-item">
-            <a id ="cats" class="nav-link" data-toggle="tab" href="#all"><strong>All Pitches</strong></a>
+            <a id ="categ" class="nav-link" data-toggle="tab" href="#all"><strong>All Pitches</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id ="cats" data-toggle="tab" href="#jobs">Interview Pitches</a>
+          <a class="nav-link" id ="categ" data-toggle="tab" href="#interview">Interview Pitches</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id ="cats" data-toggle="tab" href="#event">Intoductory speech pitch</a>
+          <a class="nav-link" id ="categ" data-toggle="tab" href="#introductory">Introductory speech pitch</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id ="cats" data-toggle="tab" href="#ads">Punchline pitch</a>
+          <a class="nav-link" id ="categ" data-toggle="tab" href="#punchline">Punchline pitch</a>
         </li>
     </ul>
     <div class="tab-content">
         <div  class="container tab-pane active" id="all"><br>
             {{ macro.display(pitches) }}
                 </div>
-                <div  class="container tab-pane fade" id="event"><br>
-                    {{ macro.display(event)}}
+                <div  class="container tab-pane fade" id="introductory"><br>
+                    {{ macro.display(introductory) }}
                 </div>
-                <div  class="container tab-pane fade" id="jobs"><br>
-                    {{ macro.display(job) }}
+                <div  class="container tab-pane fade" id="interview"><br>
+                    {{ macro.display(interview) }}
                 </div>
-                <div  class="container tab-pane fade" id="ads"><br>
-                    {{ macro.display(advertisement) }}
+                <div  class="container tab-pane fade" id="punchline"><br>
+                    {{ macro.display(punchline) }}
                 </div>
             </div>
     </div>
