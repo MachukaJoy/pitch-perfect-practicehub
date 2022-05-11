@@ -10,7 +10,7 @@ class User(db.Model,UserMixin):
     secure_password = db.Column(db.String(255),nullable = False)
 
     bio = db.Column(db.String(255))
-    profile_pic = db.Column(db.String())
+    profile_pic_path = db.Column(db.String())
 
     @property
     def set_password(self):
@@ -24,7 +24,7 @@ class User(db.Model,UserMixin):
     def verify_password(self, password):
         return check_password_hash(self.secure_password,password) 
 
-    def save(self):
+    def save_u(self):
         db.session.add(self)
         db.session.commit()
 
