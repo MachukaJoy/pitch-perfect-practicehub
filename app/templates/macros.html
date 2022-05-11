@@ -1,8 +1,8 @@
-{% macro display(piches) %}
+{% macro display(pitchdb) %}
 <div class="container-fluid">
 		<div class="row">
-				{% if piches %}
-					{% for category in piches %}
+				{% if pitchdb %}
+					{% for category in pitchdb %}
 					<div class="col-md-4" >
 						<div class="thumbnail" id="carded">
 							<h5 class="card-header">{{category.title}}</h5>
