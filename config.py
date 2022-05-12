@@ -1,7 +1,7 @@
 import os
 
 class Config:
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:superuser@localhost/pitchdb'
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgresql:superuser@localhost/pitchdb'
   SQLALCHEMY_TRACK_MODIFICATIONS=True
   SECRET_KEY = os.environ.get('SECRET_KEY')
   UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -16,7 +16,7 @@ class ProdConfig(Config):
   SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:superuser@localhost/pitchdb'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgresql:superuser@localhost/pitchdb'
     DEBUG = True
 
 config_options = {
