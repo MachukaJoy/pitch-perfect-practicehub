@@ -6,5 +6,4 @@ virtual/
 instance/
 env/
 .env
-env.bak/
 ENV/
