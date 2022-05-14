@@ -11,7 +11,6 @@ migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 manager.add_command('server',Server(use_debugger=True))
 
-# app.config['SECRET_KEY'] = 'anysecretstring'
 
 @manager.shell
 def make_shell_context():
